@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logical (Or Not)</title>
+    <link href='http://fonts.googleapis.com/css?family=Bigshot+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link href="https://fontastic.s3.amazonaws.com/gt4axpaFgnXruB39Ch83x3/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body id="bind-body">
+<noscript>
+    <div style="position: relative; z-index: 9;">
+        <div class="h1">Oops!</div>
+        <p>This game requires JavaScript to be turned on. <a href="http://enable-javascript.com/" class="link">Learn more</a></p>
+    </div>
+</noscript>
+
+<div id="bind-modal" class="modal u-hide">
+    <div class="modal-box">
+        <h2>Boom!</h2>
+
+        <p>
+            "Just made a score of <span id="bind-wins" class="wins"></span><span id="bind-loses" class="loses"></span>,
+            <br>
+            come and beat me!"
+        </p>
+
+        <ul class="button-list">
+            <li>
+                <span class="caret"></span>
+
+                <a href="#" id="bind-tweet-my-game-button" class="button button--secondary" target="_blank">
+                    <span class="icon-twitter"></span>
+                    Tweet
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="button button--secondary" data-bind="spacebar" data-event="view:newRound">
+                    <small class="muted">(space)</small>
+                    Replay
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div id="bind-bloody" class="bloody"></div>
+
+<div class="wrapper">
+    <div class="life-bar-container"><div id="bind-life-bar" class="life-bar"></div></div>
+
+    <section class="box-container">
+        <header class="header">
+            <h1>Logical <span class="ornot"><span class="muted">(</span>Or Not<span class="muted">)</span></span></h1>
+
+            <p class="taunt-container">
+                <span id="bind-taunt" class="taunt active"></span>
+            </p>
+        </header>
+
+        <pre class="question-container"><code id="bind-question"></code></pre>
+
+        <ul class="button-list">
+            <li>
+                <a href="#" id="bind-answer-left-button" class="button" data-bind="left" data-event="view:selectAnswer" data-event-data="">
+                    <span class="icon-arrow-left"></span>
+                    <span id="bind-answer-left-label"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="bind-answer-up-button" class="button" data-bind="up" data-event="view:selectAnswer" data-event-data="">
+                    <span class="icon-arrow-up"></span>
+                    <span id="bind-answer-up-label"></span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="bind-answer-right-button" class="button" data-bind="right" data-event="view:selectAnswer" data-event-data="">
+                    <span class="icon-arrow-right"></span>
+                    <span id="bind-answer-right-label"></span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__left">
+            <span class="best-score">Best Score: <span id="bind-best-score" class="u-gold">/</span></span>
+            <span class="modes">Mode: <a href="#" id="bind-normal-mode" class="active">normal</a><a href="#" id="bind-hardcore-mode">hardcore</a></span>
+        </div>
+
+        <div class="footer__right">
+          <span class="footer__links">
+            <a href="https://github.com/Zhouzi/logicalornot"><span class="icon-star"></span>Star</a>
+            <a href="https://github.com/Zhouzi/logicalornot"><span class="icon-github"></span>Contribute</a>
+            <a href="https://twitter.com/home?status=Logical%20(Or%20Not)%20-%20A%20Game%20About%20JavaScript%20Logical%20Operators%20%23logicalornot%20http%3A%2F%2Fgabinaureche.com%2Flogicalornot%2F%20via%20%40zh0uzi" target="_blank"><span class="icon-twitter"></span>Tweet</a>
+          </span>
+        </div>
+    </footer>
+</div>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-43673873-6', 'auto');
+    ga('send', 'pageview');
+</script>
+<script src="js/lib/kotlin.js"></script>
+<script src="js/klogicalornot.js"></script>
+</body>
+</html>
