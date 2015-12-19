@@ -1,0 +1,5 @@
+# build output
+out/
+
+# build output is copied there
+web/js/
